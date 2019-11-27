@@ -7,7 +7,7 @@
  */
 
 /*
- * Activity code for Packt MongoDB For Begginers.
+ * Exercise code for Packt MongoDB For Begginers.
  * This code can be run directly against the MongoDB Shell in interactive mode, or
  * Can be run as a file like below:
  * mongo "mongodb+srv://myAtlasCluster-fawxo.gcp.mongodb.net/sample_mflix" --username $USERNAME --password $PASSWORD .\Activity2.01.js
