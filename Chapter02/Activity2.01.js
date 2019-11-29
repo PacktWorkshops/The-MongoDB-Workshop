@@ -12,7 +12,7 @@
 
 Step 1: Find and list various fields from the tweet
 - creation date and time
-- user id
+- id
 - user name 
 - user profile pic
 - user verification status
