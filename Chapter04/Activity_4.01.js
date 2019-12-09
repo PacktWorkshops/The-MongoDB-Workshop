@@ -34,10 +34,10 @@ var findMoviesByGenre = function(genre, pageNumber, pageSize){
 	.toArray()
 
 
-	print("************* Page : " + pageNumber)
+    print("************* Page : " + pageNumber)
     for(var i =0; i < movies.length; i++){
-		print(movies[i].title)
-	}
+        print(movies[i].title)
+    }
 }
 
 /*
