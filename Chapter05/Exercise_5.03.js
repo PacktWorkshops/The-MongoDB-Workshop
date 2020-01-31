@@ -18,11 +18,11 @@
   * 
   */
 db.movies.updateMany(
-	{
-		"tomatoes.viewer.meter" : {$gt : 95}, 
-		"tomatoes.critic.meter" : {$gt : 95}
-	},
-	{
-		$addToSet : {"genres" : "Classic"}
-	}
+    {
+        "tomatoes.viewer.meter" : {$gt : 95}, 
+	"tomatoes.critic.meter" : {$gt : 95}
+    },
+    {
+        $addToSet : {"genres" : "Classic"}
+    }
 )
