@@ -7,7 +7,7 @@
  */
 
 // Activity code for Packt MongoDB For Begginers.
-// Activity 5.03 Update Directors name
+// Activity 5.01 Update Directors name
 
 /**
   * Your task for this activity 
@@ -18,11 +18,11 @@
   * 
   */
 db.movies.updateMany(
-	{"directors" : "H.C. Potter"},
-	{$set : {
-		"directors.$[hcPotter]" : "Henry Codman Potter"
-	}},
-	{
-		"arrayFilters" : [{hcPotter : "H.C. Potter"}]
-	}
+    {"directors" : "H.C. Potter"},
+    {$set : {
+        "directors.$[hcPotter]" : "Henry Codman Potter"
+    }},
+    {
+        "arrayFilters" : [{hcPotter : "H.C. Potter"}]
+    }
 )
