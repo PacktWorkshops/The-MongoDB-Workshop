@@ -15,28 +15,28 @@
  *
  */
 {
-	"_id" : ObjectId("5a9427658b0beebeb6975eaa"),
-	"name" : "Amy Phillips",
-	"email" : "amy_phillips@fakegmail.com",
-	"movie_id" : ObjectId("573a13bcf29313caabd57db6"),
-	"text" : "Porro aspernatur nobis velit iste. Rerum ipsum non quam nam architecto nisi. Quidem quia nemo ipsa quibusdam nesciunt.",
-	"date" : ISODate("2005-07-09T13:03:10Z")
+    "_id" : ObjectId("5a9427658b0beebeb6975eaa"),
+    "name" : "Amy Phillips",
+    "email" : "amy_phillips@fakegmail.com",
+    "movie_id" : ObjectId("573a13bcf29313caabd57db6"),
+    "text" : "Porro aspernatur nobis velit iste. Rerum ipsum non quam nam architecto nisi. Quidem quia nemo ipsa quibusdam nesciunt.",
+    "date" : ISODate("2005-07-09T13:03:10Z")
 }
 {
-	"_id" : ObjectId("5a9427658b0beebeb6975eb3"),
-	"name" : "Barristan Selmy",
-	"email" : "ian_mcelhinney@gameofthron.es",
-	"movie_id" : ObjectId("573a13bcf29313caabd57db6"),
-	"text" : "Delectus doloribus inventore tempore cumque. Repellendus dolor sapiente voluptas explicabo et delectus rem qui. Odio atque quam tempore repellat delectus.",
-	"date" : ISODate("1986-05-28T11:17:06Z")
+    "_id" : ObjectId("5a9427658b0beebeb6975eb3"),
+    "name" : "Barristan Selmy",
+    "email" : "ian_mcelhinney@gameofthron.es",
+    "movie_id" : ObjectId("573a13bcf29313caabd57db6"),
+    "text" : "Delectus doloribus inventore tempore cumque. Repellendus dolor sapiente voluptas explicabo et delectus rem qui. Odio atque quam tempore repellat delectus.",
+    "date" : ISODate("1986-05-28T11:17:06Z")
 }
 {
-	"_id" : ObjectId("5a9427658b0beebeb6975eb4"),
-	"name" : "Barristan Selmy",
-	"email" : "ian_mcelhinney@gameofthron.es",
-	"movie_id" : ObjectId("573a13bcf29313caabd57db6"),
-	"text" : "Voluptate iure illo nihil. Aliquid aspernatur quae id cumque fugit officia pariatur. Nam sequi soluta occaecati nam facilis sunt quasi.",
-	"date" : ISODate("1999-11-03T00:36:40Z")
+    "_id" : ObjectId("5a9427658b0beebeb6975eb4"),
+    "name" : "Barristan Selmy",
+    "email" : "ian_mcelhinney@gameofthron.es",
+    "movie_id" : ObjectId("573a13bcf29313caabd57db6"),
+    "text" : "Voluptate iure illo nihil. Aliquid aspernatur quae id cumque fugit officia pariatur. Nam sequi soluta occaecati nam facilis sunt quasi.",
+    "date" : ISODate("1999-11-03T00:36:40Z")
 }
 
 
@@ -45,16 +45,16 @@
  *
  */
 db.comments.updateMany(
-	{
-		"_id" : {$in : [
-			ObjectId("5a9427658b0beebeb6975eb3"),
-			ObjectId("5a9427658b0beebeb6975eb4"),
-			ObjectId("5a9427658b0beebeb6975eaa")
-		]}
-	},
-	{
-		$set : {"movie_id" : ObjectId("573a13abf29313caabd25582")}
-	}
+    {
+        "_id" : {$in : [
+	    ObjectId("5a9427658b0beebeb6975eb3"),
+	    ObjectId("5a9427658b0beebeb6975eb4"),
+	    ObjectId("5a9427658b0beebeb6975eaa")
+	]}
+    },
+    {
+        $set : {"movie_id" : ObjectId("573a13abf29313caabd25582")}
+    }
 ) 
 
 /* 
@@ -62,10 +62,10 @@ db.comments.updateMany(
  *
  */
 db.movies.findOneAndUpdate(
-	{"_id" : ObjectId("573a13bcf29313caabd57db6")},
-   	{$inc : {"num_mflix_comments" : -3}},
+    {"_id" : ObjectId("573a13bcf29313caabd57db6")},
+    {$inc : {"num_mflix_comments" : -3}},
     {
-    	"returnNewDocument" : true,
+        "returnNewDocument" : true,
         "projection" : {"title" : 1, "num_mflix_comments" : 1}
     }
 )
@@ -75,7 +75,7 @@ db.movies.findOneAndUpdate(
  *
  */
 db.movies.findOneAndUpdate(
-	{"_id" : ObjectId("573a13abf29313caabd25582")},
+    {"_id" : ObjectId("573a13abf29313caabd25582")},
     {$inc : {"num_mflix_comments" : 3}},
     {
     	"returnNewDocument" : true,
