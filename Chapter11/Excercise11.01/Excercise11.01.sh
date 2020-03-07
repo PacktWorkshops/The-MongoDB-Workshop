@@ -23,8 +23,11 @@ mongoexport --uri=mongodb+srv:USERNAME:PASSWORD@myAtlas-fawxo.gcp.mongodb.net/sa
 # With Limit
 mongoexport --uri=mongodb+srv:USERNAME:PASSWORD@myAtlas-fawxo.gcp.mongodb.net/sample_mflix --collection=movies --out=action_movies.json --sort='{released: 1}' --limit=3
 
-# With Query
-mongoexport --uri=mongodb+srv:USERNAME:PASSWORD@myAtlas-fawxo.gcp.mongodb.net/sample_mflix --collection=movies --out=action_movies.json --sort='{released : 1}' --limit=3 --query="{'genres': 'Action'}"
+# With Query (WINDOWS)
+mongoexport --uri=mongodb+srv:USERNAME:PASSWORD@myAtlas-fawxo.gcp.mongodb.net/sample_mflix --collection=movies --out=action_movies.json --sort='{released : 1}' --limit=3 --query="{genres: 'Action'}"
+
+# With Query (MAC)
+mongoexport --uri=mongodb+srv:USERNAME:PASSWORD@myAtlas-fawxo.gcp.mongodb.net/sample_mflix --collection=movies --out=action_movies.json --sort='{released : 1}' --limit=3 --query='{genres: "Action"}'
 
 # EXPECTED OUTPUT
 {"_id":{"$oid":"573a1394f29313caabce0e40"},"num_mflix_comments":1,"genres":["Action","Adventure"],"runtime":105,"title":"Le Bossu","poster":"https:#m.media-amazon.com/images/M/MV5BMzJjNTIwMDAtNmI2NS00N2UxLThmNzYtNmFlYzBhMjJhMTFjXkEyXkFqcGdeQXVyMjc1NDA2OA@@._V1_SY1000_SX677_AL_.jpg","countries":["France","Italy"],"lastupdated":"2015-08-10 00:49:05.363000000","languages":["French"],"cast":["Jean Marais","Bourvil","Sabine Sesselmann","Jean Le Poulain"],"directors":["Andrè Hunebelle"],"writers":["Pierre Foucaud","Paul Fèval (novel)","Jean Halain","Andrè Hunebelle"],"awards":{"wins":1,"nominations":0,"text":"1 win."},"year":1959,"imdb":{"rating":7.0,"votes":690,"id":52644},"type":"movie","tomatoes":{"viewer":{"rating":4.0,"numReviews":1},"lastUpdated":{"$date":"2015-08-26T18:14:36.000Z"}}}
