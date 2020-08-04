@@ -8,9 +8,6 @@
 
 /*
  * Excercise code for Packt MongoDB For Begginers.
- * This code can be run directly against the MongoDB Shell in interactive mode, or
- * Can be run as a file like below:
- * mongo "mongodb+srv://myAtlasCluster-fawxo.gcp.mongodb.net/sample_mflix" --username $USERNAME --password $PASSWORD .\Exercise2.01.js
  */
 
 
@@ -20,14 +17,16 @@
  *
  */
 var movie = {
-    "id": 14253,
-    "title": "Beauty and the Beast",
-    "year": 2016,
-    "language": "English",
-    "genre": "Romance",
-    "director": "Christophe Gans",
-    "runtime": 112,
-};
+  "id" : 14253,
+  "title" : "Beauty and the Beast",
+  "year" : 2016,
+  "language" : "English",
+  "imdb_rating" : 6.4,
+  "genre" : "Romance",
+  "director" : "Christophe Gans",
+  "runtime" : 112
+}
+;
 
 /*
  * We will iterate through all the fields in the movie and print the key and value pairs
@@ -46,6 +45,7 @@ id -> 14253
 title -> Beauty and the Beast
 year -> 2016
 language -> English
+imdb_rating -> 6.4
 genre -> Romance
 director -> Christophe Gans
 runtime -> 112
