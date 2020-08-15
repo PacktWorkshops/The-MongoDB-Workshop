@@ -11,22 +11,18 @@
 
 /**
   * Your task for this exercise 
-  * 1. Find movies acted by Leonardo DiCaprio
-  * 2. where director is Martin Scorsese
-  * 3. and, genre is either Drama or Crimes 
-  * 4. Provide title and release year
+  * Find movies acted by Leonardo DiCaprio where director is Martin Scorsese and, genre is either Drama or Crimes. Provide title and release year
   * 
   */
-
 db.movies.find(
     {
-		"cast": "Leonardo DiCaprio", 
-		"directors" : "Martin Scorsese",
-		"$or" : [{"genres" : "Drama"}, {"genres": "Crime"}]
-	},
-	{
-		"title" : 1, "year" : 1, "_id" : 0
-	}
+        "cast": "Leonardo DiCaprio",
+        "directors" : "Martin Scorsese",
+        "$or" : [{"genres" : "Drama"}, {"genres": "Crime"}]
+    },
+    {
+        "title" : 1, "year" : 1, "_id" : 0
+    }
 )
 
 
