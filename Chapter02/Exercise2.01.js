@@ -12,17 +12,17 @@
 
 
 /*
+ *
  * Below is the Movie record created into the JSON document format
- * Let's assign it to a variable called as `movie`
  *
  */
 {
-  "id" : 14253,
-  "title" : "Beauty and the Beast",
-  "year" : 2016,
-  "language" : "English",
-  "imdb_rating" : 6.4,
-  "genre" : "Romance",
-  "director" : "Christophe Gans",
-  "runtime" : 112
+    "id" : 14253,
+    "title" : "Beauty and the Beast",
+    "year" : 2016,
+    "language" : "English",
+    "imdb_rating" : 6.4,
+    "genre" : "Romance",
+    "director" : "Christophe Gans",
+    "runtime" : 112
 }
