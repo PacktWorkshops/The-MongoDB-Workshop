@@ -6,8 +6,8 @@
  * Chapter 5	
  */
 
-// Exercise code for Packt MongoDB For Begginers.
-// Exercise 5.02 Move comments to correct movie
+// Activity code for Packt MongoDB For Begginers.
+// Activity 5.01 Move comments to correct movie
 
 
 /* 
