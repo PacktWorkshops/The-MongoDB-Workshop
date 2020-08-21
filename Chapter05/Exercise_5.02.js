@@ -1,33 +1,27 @@
 /*
  * Amit Phaltankar
- * 16/08/2020
+ * 22/08/2020
  *
  * Packt MongoDB For Begginers.
  * Chapter 5
  */
 
 // Exercise code for Packt MongoDB For Begginers.
-// Exercise 5.02 Update IMDb and Tomatometer Rating
+// Exercise 5.03 Delete a low rated movie
 
 /**
   * Your task for this exercise 
-  * 1. Prepare and execute a findOneAndUpdate command
-  * 2. Query for a movie with title of "The Godfather"
-  * 3. Prepare an update expression to update IMDb and Tomatometer viewers rating
-  * 4. Return the modified document containing the modified fields
+  * 1. Prepare and execute a delete command
+  * 2. The query condition should find movies by IMDb rating of less than 2
+  * 3. The IMDb vote count should be more than 50000
+  * 4. Find all such movies and delete the one with least number of awards
+  * 5. Return the deleted document in respose and include title field. 
   * 
   */
-db.movies.findOneAndUpdate(
-    {"title" : "The Godfather"},
+db.movies.findOneAndDelete(
+    {"imdb.rating" : {$lt : 2},"imdb.votes" : {$gt : 50000}},
     {
-        $set: {
-            "imdb.votes" : 1565120,
-            "tomatoes.viewer.rating": 4.76,
-            "tomatoes.viewer.numReviews": 733777
-        }
-    },
-    {
-        "projection" : {"imdb" : 1, "tomatoes.viewer" : 1, "_id" : 0},
-        "returnNewDocument" : true
+        "sort" : {"awards.won":1},
+        "projection" : {"title" : 1}
     }
 )
