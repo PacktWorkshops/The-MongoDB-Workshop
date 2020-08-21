@@ -7,7 +7,7 @@
  */
 
 // Exercise code for Packt MongoDB For Begginers.
-// Exercise 5.03 Delete a low rated movie
+// Exercise 5.02 Delete a low rated movie
 
 /**
   * Your task for this exercise 
