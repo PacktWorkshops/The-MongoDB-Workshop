@@ -3,7 +3,7 @@
 * 08/12/2019
 *
 * Packt The MongoDB Workshop
-* Chapter 7
+* Chapter 8
 */
 
 // SOLUTION STEPS
@@ -18,7 +18,7 @@ const interface = readline.createInterface({
 });
 
 // 3. Declare any variables you will need.
-const url = 'mongodb+srv://user:password@server-abcde.gcp.mongodb.net/test?retryWrites=true&w=majority';
+const url = process.env.ATLAS_URI; // Passed in as an environment variable.
 const client = new MongoClient(url);
 const databaseName = "sample_mflix";
 const collectionName = "movies";
@@ -99,9 +99,9 @@ client.connect(function(err) {
     }
 })
 
-// RUN USING node Activity7.01.js
+// RUN USING node Activity8.01.js
 // DESIRED OUTPUT
-/* Activity7.01> node .\Activity7.01.js
+/* Activity8.01> node .\Activity8.01.js
 (node:6748) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.      Connected to MongoDB with NodeJS!list, favourite OR exit: listPlease enter a category: HorrorDocs Array
 [
   { _id: 573a1391f29313caabcd75b5, title: 'Nosferatu' },
@@ -130,5 +130,5 @@ Updated documents #:
   { _id: 573a1391f29313caabcd956e, title: 'Nosferatu' }
 ]
 list, favourite OR exit: exit
-Activity7.01>  */
+Activity8.01>  */
 

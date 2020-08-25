@@ -3,7 +3,7 @@
 * 04/10/2019
 *
 * Packt MongoDB For Begginers.
-* Chapter 6
+* Chapter 7
 */
 
 // Excercise code for Packt MongoDB For Begginers.
