@@ -15,7 +15,7 @@
 mongoexport --uri=mongodb+srv:USERNAME:PASSWORD@myAtlas-fawxo.gcp.mongodb.net/sample_mflix --collection=movies
 
 # With output
-mongoexport --uri=mongodb+srv:USERNAME:PASSWORD@myAtlas-fawxo.gcp.mongodb.net/sample_mflix --collection=movies --out=action_movies.json --sort='{released: 1}'
+mongoexport --uri=mongodb+srv:USERNAME:PASSWORD@myAtlas-fawxo.gcp.mongodb.net/sample_mflix --collection=movies --out=action_movies.json
 
 # With Sort
 mongoexport --uri=mongodb+srv:USERNAME:PASSWORD@myAtlas-fawxo.gcp.mongodb.net/sample_mflix --collection=movies --out=action_movies.json --sort='{released: 1}'
