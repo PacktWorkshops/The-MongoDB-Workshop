@@ -22,3 +22,4 @@ db.runCommand({connectionStatus : 1})
 db.getUser("Mark")
 
 exit 
+
